@@ -1,0 +1,41 @@
+
+/* ==========================================================================
+   7. Footer
+   ========================================================================== */
+
+.c-footer {
+	margin: 3em 0 0;
+	width: 100%;
+	border-top: 0.1rem dashed var(--gray);
+	color: var(--gray);
+}
+
+.c-footer a {
+	font-size: 1.2rem;
+	font-size: calc(1.2rem + (1.5 - 1.2) * ((100vw - 32rem) / (160 - 32)));
+	color: var(--gray);
+}
+
+.c-footer__copy,
+.c-footer__mention,
+.c-footer__ghost {
+	width: 100%;
+	margin: 0;
+	font-size: 1.2rem;
+	font-size: calc(1.2rem + (1.5 - 1.2) * ((100vw - 32rem) / (160 - 32)));
+	line-height: 1.5;
+}
+
+	@media (min-width: 60em) {
+		.c-footer {
+			width: 57rem;
+			width: calc(57rem + (60 - 57) * ((100vw - 32rem) / (160 - 32)));
+		}
+
+		.c-footer__copy,
+		.c-footer__mention,
+		.c-footer__ghost {
+			width: 57rem;
+			width: calc(57rem + (60 - 57) * ((100vw - 32rem) / (160 - 32)));
+		}
+	}

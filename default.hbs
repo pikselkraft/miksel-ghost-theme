@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{{!-- Document Settings --}}
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="msapplication-config" content="browserconfig.xml" />
+	<link rel="manifest" href="manifest.json">
+
+	{{! Page Meta }}
+	<title>{{meta_title}}</title>
+
+	{{! Responsive Meta Tags }}
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	{{> custom/meta}}
+
+	{{!-- Styles'n'Scripts --}}
+	<link rel="stylesheet" type="text/css" href="{{asset "css/bundle.min.css"}}" />
+
+	{{!-- JS code fontfaceobserver et prism.js --}}
+	<script type="text/javascript">
+	 /* Run fontfaceobserver if cache = !=true */
+		if (sessionStorage.fontsLoaded) {
+			var html = document.documentElement;
+
+			html.classList.add('fonts-loaded');
+			var cache = true;
+			}
+	</script>
+	<script type="text/javascript" src="{{asset "js/index.min.js"}}"></script>
+
+	{{ghost_head}}
+</head>
+<body class="{{body_class}}">
+	<div class="o-wrapper">
+			{{{body}}}
+	</div>
+	{{ghost_foot}}
+</body>
+</html>

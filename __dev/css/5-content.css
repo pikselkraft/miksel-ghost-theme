@@ -1,0 +1,72 @@
+
+/* ==========================================================================
+   5. Content
+   ========================================================================== */
+
+/* LAYOUT */
+
+@media (min-width: 60em) {
+	.o-container {
+		width: 57rem;
+		width: calc(57rem + (60 - 57) * ((100vw - 32rem) / (160 - 32)));
+		padding: 0 0 0 3em;
+	}
+}
+
+	/* ARTICLES */
+.c-article {
+	margin-bottom: var(--scale-2d);
+	padding: 0 0 var(--scale) 0;
+}
+
+	 .o-article__title {
+		display: flex;
+	 }
+
+	 	 .c-title {
+	 		 margin-top: 0;
+			 margin-bottom: 0;
+	 	 }
+
+	 	 .c-title--featured {
+	 		 padding-left: 1rem;
+	 		 font-size: 1.6rem;
+	 	 }
+
+	.c-article__time {
+		color: var(--gray);
+	}
+
+	.c-article__title {
+		margin: 0;
+		font-style: none;
+	}
+
+	.c-article__title a {
+		text-decoration: none;
+	}
+
+	.c-article__content {
+		display: flex;
+		width: 57rem;
+		width: calc(57rem + (60 - 57) * ((100vw - 32rem) / (160 - 32)));
+		max-width: 100%;
+	}
+
+		.c-article__excerpt {
+			display: flex;
+		}
+
+		@media (min-width: 60em) {
+			.c-article {
+				margin-bottom: var(--scale-2x);
+			}
+	}
+
+.c-pagination {
+	width: 57rem;
+	width: calc(57rem + (60 - 57) * ((100vw - 32rem) / (160 - 32)));
+	max-width: 100%;
+	border-top: 0.2rem solid var(--black);
+	border-bottom: 0.2rem solid var(--black);
+}

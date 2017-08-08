@@ -1,0 +1,72 @@
+{{!< default}}
+{{> header}}
+<div class="o-container">
+	<main class="o-main" role="main">
+	{{#post}}
+		<article class="c-post" role="article">
+			<header class="c-post__header">
+				<div class="c-post__meta">
+					<time class="c-post__date" datetime="{{date format="YYYY-MM-DD"}}">{{date format='dddd DD MMM YYYY'}}</time>
+					{{#if tags}}
+					<div class="c-post__tags">
+						Tags: {{tags separator=" | "}}
+					</div>
+					{{/if}}
+				</div>
+				<h1 class="c-post__title">{{title}}</h1>
+				{{#if feature_image}}
+					<img src="{{img_url feature_image}}" alt="">
+				{{/if}}
+			</header>
+
+			<div class="c-post__content">
+				{{content}}
+			</div>
+
+			<footer class="c-post__footer">
+			{{#author}}
+			<div class="c-author">
+				{{#if author.profile_image}}
+					<div class="c-author__image--thumbnail">
+						<img src="{{author.profile_image}}" class="c-author__image"/>
+					</div>
+				{{/if}}
+				<div class="c-author__info">
+					<h4 class="c-author__name"><a href="{{url}}">{{name}}</a></h4>
+					{{#if website}}<p class="c-author__website"><a href="{{website}}">{{website}}</a></p>{{/if}}
+					{{#if location}}<p class="c-author__location">{{location}}</p>{{/if}}
+					{{#if bio}}<p  class="c-author__bio">{{bio}}</p>{{/if}}
+				</div>
+			</div>
+			{{/author}}
+			<div class="c-share">
+				<p class="c-share__title">Share this post:</p>
+				<div class="c-share__icons">
+					<a class="icon-twitter" target="_blank" href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}"><span class="u-visually-hidden">Twitter</span><i class="fa fa-twitter-square fa-2x"></i></a>
+					<a class="icon-facebook" target="_blank" href="http://www.facebook.com/sharer.php?u={{url absolute="true"}}"><span class="u-visually-hidden">Facebook</span><i class="fa fa-facebook-square fa-2x"></i></a>
+					<a class="icon-gplus" target="_blank" href="https://plus.google.com/share?url={{url absolute="true"}}"><span class="u-visually-hidden">Google+</span><i class="fa fa-google-plus-square fa-2x"></i></a>
+				</div>
+			</div>
+			</footer>
+		</article>
+		<div class="c-post-nav">
+			{{#prev_post}}
+			<div class="c-post-nav__prev">
+				<a href="{{url}}" class="c-post-nav__link c-post-nav__link--prev">&#8668; PREVIOUS<br><span class="c-post-nav__title">{{title}}</span></a>
+			</div>
+			{{/prev_post}}
+			{{#next_post}}
+			<div class="c-post-nav__next">
+				<a href="{{url}}" class="c-post-nav__link c-post-nav__link--next">NEXT &#8669;<br><span class="c-post-nav__title">{{title}}</span></a>
+			</div>
+			{{else}}
+				<div class="c-post-nav__next">
+					<p class="c-post-nav__link c-post-nav__link--no">No more posts</p>
+				</div>
+			{{/next_post}}
+			{{> custom/comments}}
+			{{/post}}
+		</div>
+</main>
+{{> footer}}
+</div>

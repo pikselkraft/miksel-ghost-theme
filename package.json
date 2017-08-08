@@ -1,0 +1,33 @@
+{
+    "name": "miksel",
+    "description": "minimal theme for writer and creative people",
+    "demo": "http://pixelcraft.work/",
+    "version": "1.0.0",
+		"engines": {
+				"ghost": ">=1.0.0"
+		},
+    "license": "MIT",
+    "screenshots": {
+        "desktop": "assets/screenshot-desktop.jpg",
+        "mobile": "assets/screenshot-mobile.jpg"
+    },
+    "author": {
+        "name": "pikselkraft",
+        "email": "contact@dereksalmon.me",
+        "url": "http://www.dereksalmon.me"
+    },
+    "gpm": {
+        "type": "theme",
+        "categories": [
+            "minimal",
+						"fonts",
+            "Personal Blogs"
+        ]
+    },
+    "keywords": [
+        "ghost",
+        "theme"
+    ],
+    "bugs": "contact@dereksalmon.me",
+    "contributors": "@pikselkraft"
+}

@@ -1,0 +1,10 @@
+{{!< default}}
+{{> header}}
+<div class="o-container">
+	<main class="o-main" role="main">
+		<h1>{{tag.name}}</h1>
+		{{!-- The tag below includes the post loop - partials/loop.hbs --}}
+		{{> "loop"}}
+	</main>
+	{{> footer}}
+</div>
