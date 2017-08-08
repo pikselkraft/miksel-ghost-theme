@@ -2,7 +2,7 @@
 
 A minimalist, responsive theme focus on content for [Ghost](http://ghost.org) by [Pikselkraft](http://www.dereksalmon.me).
 
-Last tested with Ghost v0.11.10
+Last tested with Ghost v1.5
 
 ## Table of contents
 
